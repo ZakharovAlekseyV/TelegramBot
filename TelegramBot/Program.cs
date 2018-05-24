@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
+
 namespace TelegramBot
 {
     public class Program
@@ -20,6 +21,7 @@ namespace TelegramBot
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .UseUrls("http://127.0.0.1:8443")                        
                 .Build();
     }
 }
